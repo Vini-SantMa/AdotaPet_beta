@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff9f1">
+    <meta name="description" content="Protótipo acadêmico de catálogo e recomendações de pets para adoção.">
+    <title>Patinhas — companhia com a sua cara</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <script type="module" src="/js/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Patinhas, início">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 42 42" fill="none"><circle cx="12" cy="13" r="4.3"/><circle cx="21" cy="9" r="4.3"/><circle cx="30" cy="13" r="4.3"/><circle cx="9" cy="23" r="4"/><path d="M21 34c-7.5 0-12-4.6-12-9.1 0-3.6 2.8-6.1 6.1-6.1 2.1 0 4.1 1.1 5.9 3.1 1.8-2 3.8-3.1 5.9-3.1 3.3 0 6.1 2.5 6.1 6.1C33 29.4 28.5 34 21 34Z"/></svg>
+        </span>
+        <span>patinhas<span class="brand-period">.</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="#explorar">Explorar</a>
+        <a href="#match">Seu match</a>
+        <a href="#favoritos">Favoritos <span id="favoriteCount" class="nav-count">0</span></a>
+      </nav>
+      <a class="button button-small button-coral header-cta" href="#match">Encontrar meu match <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="inicio">
+      <section class="hero section-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> UM ENCONTRO DO TAMANHO DA SUA ROTINA</p>
+          <h1>Família não vem pronta.<br><em>Se encontra.</em></h1>
+          <p class="hero-description">Responda umas perguntinhas, conheça os pets e descubra quem combina com o seu dia a dia.</p>
+          <div class="hero-actions">
+            <a class="button button-coral" href="#match">Fazer meu match <span aria-hidden="true">→</span></a>
+            <a class="text-link" href="#explorar">Quero só dar uma olhadinha <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-note"><span class="note-stamp" aria-hidden="true">♥</span><span>Um bom encontro começa entendendo os dois lados.</span></div>
+        </div>
+        <div class="hero-art-wrap">
+          <div class="hero-scribble scribble-one" aria-hidden="true">✳</div>
+          <div class="hero-scribble scribble-two" aria-hidden="true">✦</div>
+          <img class="hero-art" src="/manus-storage/async-images/OfSFQyI0WM9hSBA9GCwGff/image-1.webp" alt="Ilustração original de um filhote e um gato juntos, em tons quentes e suaves">
+          <div class="hero-caption"><span class="caption-paw" aria-hidden="true">✿</span><span>Tem espaço pra todo tipo de amor.</span></div>
+        </div>
+      </section>
+
+      <div class="demo-notice" role="note"><span class="notice-icon" aria-hidden="true">i</span><span><strong>Protótipo acadêmico:</strong> todos os pets, fotos e dados são fictícios. Não são anúncios reais nem representam abrigos.</span></div>
+
+      <section id="match" class="match-section section-wrap">
+        <div class="section-intro">
+          <p class="eyebrow">UM QUIZ CURTINHO, UM COMEÇO DE CONVERSA</p>
+          <h2>Como é a vida<br>que vocês vão dividir?</h2>
+          <p>Não existe resposta certa. Só queremos entender um pouquinho da sua rotina.</p>
+          <img class="mascot" src="/manus-storage/async-images/OfSFQyI0WM9hSBA9GCwGff/image-2.webp" alt="Mascote original do Patinhas, um filhote caramelo com uma orelha caída" loading="lazy">
+        </div>
+        <form id="matchForm" class="quiz-card">
+          <div class="quiz-card-heading"><span class="step-badge">SEU JEITINHO</span><span class="quiz-time">leva menos de 1 min</span></div>
+          <label class="field-label" for="prefSpecies">Que tipo de companhia você imagina?</label>
+          <select id="prefSpecies" name="species">
+            <option value="any">Estou de coração aberto</option>
+            <option value="dog">Um cãozinho</option>
+            <option value="cat">Um gatinho</option>
+          </select>
+          <div class="field-row">
+            <div><label class="field-label" for="prefSize">Porte que combina com seu espaço</label>
+              <select id="prefSize" name="size"><option value="any">Qualquer porte</option><option value="small">Pequeno</option><option value="medium">Médio</option><option value="large">Grande</option></select>
+            </div>
+            <div><label class="field-label" for="prefHome">Onde vocês vão morar?</label>
+              <select id="prefHome" name="home_type"><option value="apartment">Apartamento</option><option value="house">Casa</option></select>
+            </div>
+          </div>
+          <label class="field-label" for="prefActivity">Seu ritmo para passeios e brincadeiras</label>
+          <select id="prefActivity" name="activity_level"><option value="low">Mais tranquilo</option><option value="medium" selected>Um pouco de cada</option><option value="high">Bem ativo!</option></select>
+          <label class="checkbox-label"><input id="prefChildren" name="has_children" type="checkbox"><span class="custom-check" aria-hidden="true"></span><span>Tem crianças na família</span></label>
+          <button class="button button-green quiz-submit" type="submit">Ver quem combina comigo <span aria-hidden="true">→</span></button>
+          <p class="privacy-note">Sem cadastro. Suas respostas ficam só neste protótipo de demonstração.</p>
+        </form>
+      </section>
+
+      <section id="recommendationResults" class="recommendation-section section-wrap" hidden>
+        <div class="section-heading">
+          <div><p class="eyebrow">OLHA SÓ QUEM APARECEU</p><h2>Possíveis companheiros</h2><p class="section-description">A pontuação é uma estimativa educativa, calculada pelas características e respostas selecionadas.</p></div>
+          <a class="text-link" href="#explorar">Ver todos os pets <span aria-hidden="true">↓</span></a>
+        </div>
+        <div id="recommendationGrid" class="pet-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="explorar" class="catalog-section section-wrap">
+        <div class="section-heading catalog-heading">
+          <div><p class="eyebrow">CADA UM COM SEU JEITINHO</p><h2>Conheça os moradores</h2><p class="section-description">Use os filtros para explorar as histórias de demonstração.</p></div>
+          <span id="petCount" class="result-count">Carregando pets…</span>
+        </div>
+        <form id="filterForm" class="filter-bar" aria-label="Filtrar pets">
+          <label><span>Espécie</span><select name="species"><option value="">Todas</option><option value="dog">Cães</option><option value="cat">Gatos</option></select></label>
+          <label><span>Porte</span><select name="size"><option value="">Todos</option><option value="small">Pequeno</option><option value="medium">Médio</option><option value="large">Grande</option></select></label>
+          <label><span>Idade</span><select name="age"><option value="">Todas</option><option value="young">Jovem</option><option value="adult">Adulto</option><option value="senior">Sênior</option></select></label>
+          <label><span>Energia</span><select name="energy"><option value="">Qualquer ritmo</option><option value="low">Tranquila</option><option value="medium">Moderada</option><option value="high">Alta</option></select></label>
+          <button id="clearFilters" class="clear-button" type="button">Limpar</button>
+        </form>
+        <div id="catalogMessage" class="inline-message" role="status"></div>
+        <div id="petGrid" class="pet-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="favoritos" class="favorites-section section-wrap">
+        <div class="section-heading">
+          <div><p class="eyebrow">GUARDADOS COM CARINHO</p><h2>Seus favoritos</h2><p class="section-description">Volte aqui para rever os pets que chamaram sua atenção.</p></div>
+          <span class="favorite-heading-icon" aria-hidden="true">♡</span>
+        </div>
+        <div id="favoritesMessage" class="empty-state">Seu mural está vazio por enquanto. Toque no coração de um pet para guardar.</div>
+        <div id="favoriteGrid" class="pet-grid"></div>
+      </section>
+
+      <section id="servicos" class="services-section section-wrap">
+        <div class="services-heading"><div><p class="eyebrow">POR TRÁS DAS PATINHAS</p><h2>Uma equipe de serviços<br>trabalhando em conjunto.</h2></div><p>Esta área mostra o estado dos microserviços e documenta o caminho das informações. Tudo passa pelo API Gateway.</p></div>
+        <div class="gateway-status"><span class="status-dot" aria-hidden="true"></span><strong>API Gateway</strong><span>porta pública · entrada da interface</span><span id="gatewayStatusText" class="status-label">verificando…</span><a href="/docs" target="_blank" rel="noreferrer">Documentação</a></div>
+        <div id="serviceStatus" class="service-status-grid" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a class="brand footer-brand" href="#inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 42 42" fill="none"><circle cx="12" cy="13" r="4.3"/><circle cx="21" cy="9" r="4.3"/><circle cx="30" cy="13" r="4.3"/><circle cx="9" cy="23" r="4"/><path d="M21 34c-7.5 0-12-4.6-12-9.1 0-3.6 2.8-6.1 6.1-6.1 2.1 0 4.1 1.1 5.9 3.1 1.8-2 3.8-3.1 5.9-3.1 3.3 0 6.1 2.5 6.1 6.1C33 29.4 28.5 34 21 34Z"/></svg></span><span>patinhas<span class="brand-period">.</span></span></a><p>Um protótipo de Engenharia de Software feito com carinho — e dados fictícios.</p><a class="back-top" href="#inicio">Voltar ao topo ↑</a></footer>
+
+    <dialog id="petDialog" class="pet-dialog" aria-labelledby="dialogName">
+      <button id="closeDialog" class="dialog-close" type="button" aria-label="Fechar detalhes">×</button>
+      <div id="dialogContent"></div>
+    </dialog>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+sequenceDiagram
+  actor Pessoa as Pessoa usuária
+  participant Web as Interface
+  participant Gateway as API Gateway
+  participant Pref as Microserviço Preferências/Favoritos
+  participant Pets as Microserviço Pets
+
+  Pessoa->>Web: Toca no coração do cartão
+  Web->>Gateway: PUT /api/favorites/{pet_id}
+  Gateway->>Pref: PUT /favorites/demo/{pet_id}
+  Pref->>Pref: Grava chave em preferences.sqlite3
+  Pref-->>Gateway: saved=true
+  Gateway-->>Web: Favorito salvo
+  Web->>Gateway: GET /api/favorites e GET /api/pets
+  Gateway->>Pref: Lista IDs do visitante demo
+  Gateway->>Pets: Busca os perfis do catálogo
+  Pref-->>Gateway: pet_ids
+  Pets-->>Gateway: Lista de pets
+  Gateway-->>Web: Estado atualizado
+  Web-->>Pessoa: Contador e mural de favoritos

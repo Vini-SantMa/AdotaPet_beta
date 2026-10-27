@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+*.sqlite
+*.sqlite3
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+docs/.typst-build-plan.json
+docs/relatorio/main.typst-diagnostics.log
+docs/relatorio/verify-report.json
+docs/relatorio/review-manifest.json
+docs/relatorio/review/

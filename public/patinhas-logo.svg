@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Marca Patinhas">
+  <rect width="256" height="256" rx="64" fill="#fff9f1"/>
+  <g fill="#e77959">
+    <ellipse cx="73" cy="83" rx="22" ry="30" transform="rotate(-24 73 83)"/>
+    <ellipse cx="125" cy="62" rx="22" ry="30" transform="rotate(-7 125 62)"/>
+    <ellipse cx="177" cy="83" rx="22" ry="30" transform="rotate(24 177 83)"/>
+    <ellipse cx="54" cy="137" rx="20" ry="27" transform="rotate(-38 54 137)"/>
+    <path d="M128 224c-36 0-75-23-75-59 0-26 19-45 43-45 14 0 25 7 32 18 7-11 18-18 32-18 24 0 43 19 43 45 0 36-39 59-75 59Z"/>
+  </g>
+  <circle cx="199" cy="192" r="16" fill="#527b5a"/>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "entry": "main.typ",
+  "metadata": {
+    "author": "Projeto acadêmico de Engenharia de Software",
+    "subtitle": "Projeto de Engenharia de Software com Microserviços e Componentes de Software",
+    "title": "Patinhas — Modelagem e Implementação"
+  },
+  "mode": "report",
+  "theme": "report-theme.typ"
+}

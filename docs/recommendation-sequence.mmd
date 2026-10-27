@@ -1,0 +1,23 @@
+sequenceDiagram
+  actor Pessoa as Pessoa usuária
+  participant Web as Interface no navegador
+  participant Gateway as API Gateway
+  participant Pref as Microserviço Preferências/Favoritos
+  participant Reco as Microserviço Recomendações
+  participant Pets as Microserviço Pets
+
+  Pessoa->>Web: Preenche e envia o questionário
+  Web->>Gateway: PUT /api/preferences
+  Gateway->>Pref: PUT /preferences/{visitor_id}
+  Pref-->>Gateway: Preferências persistidas em SQLite
+  Gateway-->>Web: Resposta salva
+  Web->>Gateway: GET /api/recommendations
+  Gateway->>Reco: GET /recommendations/{visitor_id}
+  Reco->>Pets: GET /pets
+  Pets-->>Reco: Lista de pets fictícios
+  Reco->>Pref: GET /preferences/{visitor_id}
+  Pref-->>Reco: Preferências atuais
+  Reco->>Reco: Calcula pontos e motivos por regras
+  Reco-->>Gateway: Lista ordenada com pontuação e justificativas
+  Gateway-->>Web: JSON de recomendações
+  Web-->>Pessoa: Cartões com compatibilidade e explicação

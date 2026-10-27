@@ -1,0 +1,101 @@
+{
+  "brand": {
+    "name": "Patinhas",
+    "language": "pt-BR",
+    "positioning": "Um jeito leve e claro de descobrir qual pet fictício combina com a sua rotina.",
+    "personality": ["acolhedora", "otimista", "honesta"],
+    "voice_examples": [
+      "Vamos achar um companheiro que combine com sua rotina.",
+      "A Mel combina com você: porte pequeno, energia tranquila."
+    ],
+    "originality_note": "A mascote e a identidade são originais. A inspiração em aplicativos lúdicos limita-se a incentivo, clareza e sinais de progresso; não reproduzir personagem, logotipo, composição de marca ou elementos proprietários do Duolingo."
+  },
+  "reference_study": [
+    {
+      "name": "Petfinder",
+      "url": "https://www.petfinder.com/",
+      "observed_pattern": "Separação clara por cães/gatos, entrada direta para procurar animais, listagem e ação de favoritar.",
+      "adaptation": "Navegação curta entre explorar, quiz e favoritos; não reproduzir marca ou layout literal."
+    },
+    {
+      "name": "Adopt a Pet — filtros",
+      "url": "https://www.adoptapet.com/blog/adoption/how-filters-work",
+      "observed_pattern": "Filtros de idade, porte, espécie e convivência tornam a busca relevante para rotina e moradia.",
+      "adaptation": "Usar poucos filtros de maior valor acadêmico: espécie, porte, idade e energia."
+    },
+    {
+      "name": "Troakly — Dog Rescue & Adoption Landing Page, Dribbble",
+      "url": "https://dribbble.com/shots/26268858-Dog-Rescue-Adoption-Landing-Page-Design-UI-for-Animal-Shelters",
+      "observed_pattern": "Hero emocional, hierarquia de chamada e paleta quente de referência.",
+      "adaptation": "Composição assimétrica com mascote original e coral/creme próprios; cores e layout ajustados ao Patinhas."
+    },
+    {
+      "name": "HALO LAB — PawHome, Behance",
+      "url": "https://www.behance.net/gallery/220657513/PawHome-Pet-Adoption-Platform-UXUI-Branding?locale=en_US",
+      "observed_pattern": "Tom amigável, estrutura simples, foco nas necessidades da pessoa usuária e baixa carga cognitiva.",
+      "adaptation": "Questionário curto, etapas pequenas e explicações de recomendação visíveis."
+    }
+  ],
+  "visual_direction": {
+    "movement": "Editorial lúdico contemporâneo, com formas orgânicas suaves e uma interface de produto direta.",
+    "core_principles": [
+      "Descoberta acolhedora sem esconder informação útil.",
+      "Leitura rápida das características e compatibilidades.",
+      "Progresso incentivador sem gamificação excessiva.",
+      "Aviso inequívoco de que os anúncios são apenas demonstração."
+    ],
+    "layout": "Hero assimétrico com texto e ação à esquerda e ilustração à direita; navegação superior compacta; filtros visíveis junto à listagem; cartões com imagens amplas; quiz em poucos passos; empilhamento responsivo em celular.",
+    "signature_elements": [
+      "Mascote original: filhote caramelo de orelha caída e focinho creme, em traço editorial macio.",
+      "Pata-coração geométrica como marca, sem tipografia rasterizada.",
+      "Pequenos arcos de progresso e detalhes de pata como ornamento discreto."
+    ],
+    "interaction": "Cada ação deve mostrar resposta clara: filtro aplicado, favorito salvo, passo concluído ou recomendação explicada. Preferir texto visível e estados acessíveis a animações decorativas.",
+    "animation": {
+      "duration_ms": [150, 220],
+      "patterns": ["hover curto nos cartões", "selo de favorito com escala discreta", "transição de etapa do questionário"],
+      "reduced_motion": "Respeitar prefers-reduced-motion e remover movimentos não essenciais."
+    },
+    "typography": {
+      "display": "Fraunces ou Georgia como fallback serifado caloroso para títulos.",
+      "body": "DM Sans ou system-ui para interface e texto.",
+      "hierarchy": "Título hero destacado; títulos de secção médios; nome do animal forte; metadados compactos porém legíveis."
+    }
+  },
+  "tokens": {
+    "color": {
+      "canvas": "#FFF9F1",
+      "surface": "#FFFFFF",
+      "ink": "#24352E",
+      "ink_muted": "#65746C",
+      "brand_primary": "#E77959",
+      "brand_primary_dark": "#C95C42",
+      "leaf": "#6E8B70",
+      "leaf_soft": "#EAF0E5",
+      "sunshine": "#F4CB6A",
+      "peach_soft": "#FBE8DC",
+      "border": "#E8E0D5",
+      "success": "#477C5B",
+      "warning": "#9A6923"
+    },
+    "radius_px": {"small": 12, "medium": 20, "large": 28, "pill": 999},
+    "shadow": "Sombras curtas e difusas, discretas, usadas para elevar cartões interativos.",
+    "spacing_px": [4, 8, 12, 16, 24, 32, 48, 64]
+  },
+  "components": {
+    "pet_card": "Imagem grande com cantos arredondados, selo de espécie/idade, nome, porte e energia, ação de favorito e link para detalhes.",
+    "match_indicator": "Pontuação percentual com selo e texto de compatibilidade; nunca codificar o significado só pela cor.",
+    "fictional_data_notice": "Faixa visível e concisa na tela de catálogo: pets e informações são fictícios, somente para demonstração acadêmica.",
+    "filters": "Controles simples, rótulos visíveis, opção de limpar e apresentação adequada em desktop e celular."
+  },
+  "assets": {
+    "hero": "/manus-storage/async-images/OfSFQyI0WM9hSBA9GCwGff/image-1.webp",
+    "mascot": "/manus-storage/async-images/OfSFQyI0WM9hSBA9GCwGff/image-2.webp",
+    "pet_profiles": [
+      "/manus-storage/async-images/OfSFQyI0WM9hSBA9GCwGff/image-3.webp",
+      "/manus-storage/async-images/OfSFQyI0WM9hSBA9GCwGff/image-4.webp",
+      "/manus-storage/async-images/OfSFQyI0WM9hSBA9GCwGff/image-5.webp"
+    ],
+    "usage_note": "Imagens geradas para este protótipo, não retratos de animais realmente disponíveis para adoção."
+  }
+}

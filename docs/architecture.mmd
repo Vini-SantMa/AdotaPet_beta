@@ -1,0 +1,25 @@
+flowchart LR
+  Pessoa[Pessoa usuária] --> Navegador[Navegador]
+
+  subgraph Interface[Interface HTML CSS JavaScript]
+    Navegador --> Cartao[Componente reutilizável PetCard]
+    Navegador --> Indicador[Componente reutilizável MatchScore]
+  end
+
+  Navegador -- HTTP JSON pela única entrada --> Gateway[API Gateway FastAPI porta 3000]
+  Gateway -- GET e detalhe de pets --> Pets[Microserviço Pets FastAPI porta 8001]
+  Gateway -- Preferências e favoritos --> Preferencias[Microserviço Preferências e Favoritos FastAPI porta 8002]
+  Gateway -- Pontuação de compatibilidade --> Recomendacoes[Microserviço Recomendações FastAPI porta 8003]
+
+  Pets --> BancoPets[(SQLite próprio pets.sqlite3)]
+  Preferencias --> BancoPreferencias[(SQLite próprio preferences.sqlite3)]
+
+  Recomendacoes -- HTTP GET /pets --> Pets
+  Recomendacoes -- HTTP GET /preferences/{visitor_id} --> Preferencias
+
+  classDef gateway fill:#e77959,color:#ffffff,stroke:#c95c42,stroke-width:2px;
+  classDef service fill:#eaf0e5,color:#24352e,stroke:#6e8b70,stroke-width:1.5px;
+  classDef component fill:#fbe8dc,color:#24352e,stroke:#e77959,stroke-width:1px;
+  class Gateway gateway;
+  class Pets,Preferencias,Recomendacoes service;
+  class Cartao,Indicador component;
